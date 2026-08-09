@@ -1,0 +1,20 @@
+{
+  "name": "learningideas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "check": "node --check server.mjs && node --check content.mjs && node --check app.mjs",
+    "test": "node --test",
+    "test:browser": "playwright test",
+    "test:all": "npm run check && npm test && npm run test:browser"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}
