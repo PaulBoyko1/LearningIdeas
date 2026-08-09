@@ -69,7 +69,7 @@ export const projects = Object.freeze([
     helps: "It catches frame mistakes, unstable gain choices, saturation problems, and unsafe assumptions while the experiment is still simulated.",
     evidence: "Non-identity attitude targets, Python/C++ parity tests, deterministic sensors, and explicit safety documentation.",
     conceptIds: ["boundaries", "feedback", "state", "validation", "reproducibility"],
-    link: "https://github.com/PaulBoyko1/FlightStack"
+    link: "https://github.com/PaulBoyko1/FlightStack/tree/codex/flightstack-safety-hardening"
   },
   {
     id: "forgesight",
@@ -82,7 +82,7 @@ export const projects = Object.freeze([
     helps: "It separates threshold selection from testing and makes distribution shift an explicit deployment question.",
     evidence: "Manifest discovery, validation-only calibration, shift-group helpers, checkpoints, API contracts, and systems benchmarks.",
     conceptIds: ["boundaries", "state", "validation", "shift", "reproducibility"],
-    link: "https://github.com/PaulBoyko1/ForgeSight"
+    link: "https://github.com/PaulBoyko1/ForgeSight/tree/codex/forgesight-hardening"
   },
   {
     id: "microalpha",
@@ -95,7 +95,7 @@ export const projects = Object.freeze([
     helps: "It protects against future information entering features, train/test overlap, and confusing predictive metrics with economic outcomes.",
     evidence: "Session-aware state resets, label purges, logistic and majority baselines, and explicit research contracts.",
     conceptIds: ["boundaries", "causality", "uncertainty", "validation", "reproducibility"],
-    link: "https://github.com/PaulBoyko1/MicroAlpha"
+    link: "https://github.com/PaulBoyko1/MicroAlpha/tree/codex/microalpha-hardening"
   },
   {
     id: "jobos",
@@ -108,7 +108,7 @@ export const projects = Object.freeze([
     helps: "It prevents forgotten follow-ups, illegal workflow jumps, stale updates, and the quiet loss of context across scattered tools.",
     evidence: "State transitions, due-action rules, version checks, activity history, daily dashboard, and focused tests.",
     conceptIds: ["boundaries", "feedback", "state", "validation", "reproducibility"],
-    link: "https://github.com/PaulBoyko1/JobOS"
+    link: "https://github.com/PaulBoyko1/JobOS/tree/codex/jobos-foundation"
   },
   {
     id: "marketglass",
@@ -121,7 +121,7 @@ export const projects = Object.freeze([
     helps: "It reduces overconfidence, makes assumptions inspectable, and creates visible conditions for revising a view.",
     evidence: "Probability checks, an evidence ledger, falsifiers, local persistence, and pure tested reasoning logic.",
     conceptIds: ["state", "uncertainty", "validation", "reproducibility"],
-    link: "https://github.com/PaulBoyko1/MarketGlass"
+    link: "https://github.com/PaulBoyko1/MarketGlass/tree/codex/marketglass-foundation"
   },
   {
     id: "physicalalpha",
@@ -134,7 +134,7 @@ export const projects = Object.freeze([
     helps: "It prevents future observations from tuning the fit and makes a numerical result reproducible instead of merely impressive.",
     evidence: "Typed parameter validation, full timestamp-order checks, seeded noise, holdout RMSE, CLI output, and strict CI.",
     conceptIds: ["feedback", "causality", "uncertainty", "validation", "reproducibility"],
-    link: "https://github.com/PaulBoyko1/PhysicalAlpha"
+    link: "https://github.com/PaulBoyko1/PhysicalAlpha/tree/codex/physicalalpha-foundation"
   }
 ]);
 
