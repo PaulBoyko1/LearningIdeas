@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="LearningIdeas is a project-separated interactive concept atlas for the flagship portfolio.">
+    <title>LearningIdeas | MarketGlass Track</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#overview" aria-label="LearningIdeas project library">
+          <span class="brand-mark" aria-hidden="true">LI</span>
+          <span><strong>LearningIdeas</strong><small>project learning library</small></span>
+        </a>
+        <div class="topbar-copy"><span class="eyebrow">Active learning track</span><strong id="track-name">MarketGlass</strong></div>
+        <div id="progress-summary" class="progress-summary" aria-live="polite"></div>
+      </header>
+
+      <aside class="project-rail" aria-label="Project learning tracks">
+        <div class="rail-heading"><span class="eyebrow">Projects</span><strong>Study by build</strong></div>
+        <nav id="project-list" class="project-list" aria-label="Available project tracks"></nav>
+        <p class="rail-note">Each track keeps its definitions, examples, limitations, and practice connected to the project that uses them.</p>
+      </aside>
+
+      <main class="workspace">
+        <section class="track-header" aria-labelledby="page-title">
+          <div>
+            <p id="track-kind" class="eyebrow">Quantitative market laboratory</p>
+            <h1 id="page-title">MarketGlass: learn the research loop before trusting the result.</h1>
+          </div>
+          <p id="track-description" class="header-copy"></p>
+        </section>
+
+        <nav id="module-tabs" class="module-tabs" aria-label="MarketGlass learning sequence"></nav>
+
+        <section class="learning-layout" aria-label="Active lesson">
+          <article class="lesson-panel">
+            <div class="lesson-heading">
+              <div><p id="module-number" class="eyebrow"></p><h2 id="module-title"></h2></div>
+              <button id="complete-module" class="completion-button" type="button"></button>
+            </div>
+            <p id="module-summary" class="module-summary"></p>
+            <p id="module-lesson" class="lesson-copy"></p>
+            <div class="application-band"><span>In MarketGlass</span><p id="module-action"></p></div>
+          </article>
+
+          <aside class="loop-panel" aria-labelledby="loop-title">
+            <div class="panel-heading"><p class="eyebrow">Research loop</p><h2 id="loop-title">See it move through time</h2></div>
+            <canvas id="loop-canvas" width="720" height="330" role="img" aria-label="MarketGlass research loop illustration"></canvas>
+            <p id="loop-caption" class="canvas-caption"></p>
+          </aside>
+        </section>
+
+        <section class="atlas-section" aria-labelledby="atlas-title">
+          <div class="section-heading"><div><p class="eyebrow">Concept atlas</p><h2 id="atlas-title">Definitions that stay attached to the work</h2></div><span id="concept-count" class="count-chip"></span></div>
+          <div class="atlas-layout">
+            <div id="concept-list" class="concept-list" aria-label="Concepts in this lesson"></div>
+            <article id="concept-detail" class="concept-detail" aria-live="polite"></article>
+          </div>
+        </section>
+
+        <section class="practice-section" aria-labelledby="practice-title">
+          <div class="section-heading"><div><p class="eyebrow">Practice lab</p><h2 id="practice-title">Choose the next responsible move</h2></div><label class="scenario-picker">Scenario <select id="scenario-select"></select></label></div>
+          <div class="practice-layout">
+            <article class="scenario-panel">
+              <div class="scenario-title"><span id="scenario-time" class="time-chip"></span><h3 id="scenario-label"></h3></div>
+              <div id="scenario-signals" class="signal-grid"></div>
+              <p id="scenario-question" class="scenario-question"></p>
+              <div id="scenario-choices" class="scenario-choices"></div>
+            </article>
+            <aside id="practice-feedback" class="practice-feedback" aria-live="polite"></aside>
+          </div>
+        </section>
+
+        <section class="reflection-section" aria-labelledby="reflection-title">
+          <div class="section-heading"><div><p class="eyebrow">Field note</p><h2 id="reflection-title">Carry one question back to MarketGlass</h2></div></div>
+          <div id="reflection-list" class="reflection-list"></div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./app.mjs"></script>
+  </body>
+</html>
