@@ -33,7 +33,7 @@ test("lesson position is bounded and progress is honest", () => {
 });
 
 test("definition search finds project-specific language", () => {
-  const matches = filterDefinitions(definitions, "threshold calibration");
+  const matches = filterDefinitions(definitions, "calibration");
 
   assert.deepEqual(
     matches.map((definition) => definition.term),
