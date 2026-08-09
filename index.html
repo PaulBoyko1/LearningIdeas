@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="A paced, interactive guide to the ideas connecting six flagship engineering projects."
+    >
+    <title>LearningIdeas | Six Projects, Shared Thinking</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-bar">
+      <div class="brand-lockup" aria-label="LearningIdeas">
+        <span class="brand-mark" aria-hidden="true">L</span>
+        <span>
+          <strong>LearningIdeas</strong>
+          <small>Six projects, shared thinking</small>
+        </span>
+      </div>
+      <p id="progress-status" class="progress-status" aria-live="polite">Lesson progress is saved on this device.</p>
+    </header>
+
+    <div class="app-shell">
+      <nav class="rail" aria-label="LearningIdeas sections">
+        <button class="rail-button is-active" type="button" data-view="start" aria-current="page">
+          Start
+        </button>
+        <button class="rail-button" type="button" data-view="map">Idea map</button>
+        <button class="rail-button" type="button" data-view="definitions">Definitions</button>
+        <button class="rail-button" type="button" data-view="projects">Projects</button>
+        <p class="rail-note">A private learning trail. No account, telemetry, or data collection.</p>
+      </nav>
+
+      <main>
+        <section class="view is-active" data-view-panel="start" aria-labelledby="start-title">
+          <div class="view-intro">
+            <p class="eyebrow">A paced guide</p>
+            <h1 id="start-title">Learn the ideas before you compare the projects.</h1>
+            <p>
+              These six projects live in different domains, but they keep returning to the same
+              questions: What is known? What can change? What counts as evidence? How do we test
+              ourselves before the world does?
+            </p>
+          </div>
+
+          <section class="learning-meter" aria-label="Learning path progress">
+            <div class="meter-heading">
+              <span id="lesson-label">Chapter 1 of 6</span>
+              <strong id="lesson-percent">17%</strong>
+            </div>
+            <div class="meter-track"><span id="lesson-progress-bar"></span></div>
+          </section>
+
+          <article class="lesson-surface" aria-labelledby="lesson-title">
+            <div class="lesson-number" id="lesson-number">01</div>
+            <div class="lesson-content">
+              <p class="eyebrow">One idea at a time</p>
+              <h2 id="lesson-title"></h2>
+              <p id="lesson-premise" class="lesson-premise"></p>
+              <div class="lesson-grid">
+                <section>
+                  <h3>Ask yourself</h3>
+                  <p id="lesson-question"></p>
+                </section>
+                <section>
+                  <h3>Apply it</h3>
+                  <p id="lesson-practice"></p>
+                </section>
+              </div>
+              <div class="lesson-connections">
+                <div>
+                  <span>Ideas in this chapter</span>
+                  <div id="lesson-concepts" class="inline-list"></div>
+                </div>
+                <div>
+                  <span>Projects to inspect</span>
+                  <div id="lesson-projects" class="inline-list"></div>
+                </div>
+              </div>
+              <div class="lesson-controls">
+                <button class="muted-button" type="button" data-action="previous-lesson">Previous</button>
+                <button class="primary-button" type="button" data-action="next-lesson">Continue</button>
+              </div>
+            </div>
+          </article>
+
+          <section class="start-bridge" aria-labelledby="bridge-title">
+            <p class="eyebrow">The practical question</p>
+            <h2 id="bridge-title">How these ideas help</h2>
+            <div class="bridge-grid">
+              <article>
+                <h3>Make decisions inspectable</h3>
+                <p>State, evidence, and valid transitions prevent important reasoning from disappearing into informal memory.</p>
+              </article>
+              <article>
+                <h3>Keep evaluation honest</h3>
+                <p>Boundaries, held-out data, baselines, and calibration make a result harder to accidentally overstate.</p>
+              </article>
+              <article>
+                <h3>Learn from reality safely</h3>
+                <p>Feedback loops and simulations make it possible to adapt without pretending the system has no limits.</p>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <section class="view" data-view-panel="map" aria-labelledby="map-title" hidden>
+          <div class="view-intro">
+            <p class="eyebrow">Connection map</p>
+            <h1 id="map-title">The same ideas reappear in different forms.</h1>
+            <p>
+              A flight controller, an inspection system, a job-search workflow, and a research
+              notebook all become more reliable when their assumptions and checks are explicit.
+            </p>
+          </div>
+
+          <div class="map-layout">
+            <figure class="concept-figure" aria-labelledby="concept-figure-title">
+              <div class="figure-heading">
+                <div>
+                  <p class="eyebrow">Visual index</p>
+                  <h2 id="concept-figure-title">Concept field</h2>
+                </div>
+                <span id="map-summary">All projects</span>
+              </div>
+              <canvas id="concept-canvas" width="900" height="520">
+                A visual map of the ideas shared by the portfolio projects.
+              </canvas>
+              <figcaption>Each color names an idea that recurs across the six projects.</figcaption>
+            </figure>
+
+            <section class="map-explainer" aria-labelledby="map-explainer-title">
+              <p class="eyebrow">Current lens</p>
+              <h2 id="map-explainer-title">Choose an idea to trace it.</h2>
+              <p id="selected-concept-copy">
+                Start with any idea. The project list below will reveal where it becomes concrete.
+              </p>
+              <div id="concept-chips" class="concept-chips"></div>
+            </section>
+          </div>
+
+          <section class="tool-section map-project-section" aria-labelledby="map-project-title">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Applied examples</p>
+                <h2 id="map-project-title">Projects through this lens</h2>
+              </div>
+              <label class="search-label">
+                <span class="sr-only">Search projects</span>
+                <input id="project-search" type="search" placeholder="Search projects">
+              </label>
+            </div>
+            <div id="map-projects" class="project-grid"></div>
+          </section>
+        </section>
+
+        <section class="view" data-view-panel="definitions" aria-labelledby="definitions-title" hidden>
+          <div class="view-intro">
+            <p class="eyebrow">Plain language glossary</p>
+            <h1 id="definitions-title">Definitions that make the project decisions readable.</h1>
+            <p>
+              Each definition starts general, then names exactly where it appears in the portfolio.
+              That bridge is the point: theory becomes useful when you can recognize it in a real
+              design choice.
+            </p>
+          </div>
+          <label class="definition-search">
+            <span>Find an idea</span>
+            <input id="definition-search" type="search" placeholder="Try leakage, baseline, state, or calibration">
+          </label>
+          <div id="definition-count" class="result-count"></div>
+          <div id="definition-list" class="definition-grid"></div>
+        </section>
+
+        <section class="view" data-view-panel="projects" aria-labelledby="projects-title" hidden>
+          <div class="view-intro">
+            <p class="eyebrow">Project translations</p>
+            <h1 id="projects-title">One portfolio, six ways to apply disciplined thinking.</h1>
+            <p>
+              Choose a project to see its central idea, a practical use, the risk it reduces, and
+              the concrete evidence built into its implementation.
+            </p>
+          </div>
+          <div id="project-tabs" class="project-tabs" aria-label="Choose a portfolio project"></div>
+          <article id="project-detail" class="project-detail"></article>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
